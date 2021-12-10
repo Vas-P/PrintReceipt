@@ -2,7 +2,7 @@ const { exec } = require('child_process');
 const fs = require('fs');
 const config = require('../config.json');
 const package = require('../package.json');
-var iconv = require('iconv-lite');
+const iconv = require('iconv-lite');
 
 module.exports = (app) => {
     app.get('/Version', (req, res) => {
