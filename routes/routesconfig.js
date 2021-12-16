@@ -39,7 +39,9 @@ module.exports = (app) => {
                                     .then(function (response) {
                                         console.log('response.status = ', response.status);
                                         console.log('response.statusText = ', response.statusText);
-                                        console.log('Printed => removed from Printqueue register');
+                                        if (response.status === 200) {
+                                            console.log('Printed => removed from Printqueue register');
+                                        }
                                     })
                                     .catch(function (error) {
                                         console.log('deletePrint error = ', error);
@@ -58,8 +60,9 @@ module.exports = (app) => {
                                     .then(function (response) {
                                         console.log('response.status = ', response.status);
                                         console.log('response.statusText = ', response.statusText);
-                                        console.log('Printed => removed from Printqueue register');
-                                    })
+                                        if (response.status === 200) {
+                                            console.log('Printed => removed from Printqueue register');
+                                        }                                    })
                                     .catch(function (error) {
                                         console.log('deletePrint error = ', error);
                                     });                     
